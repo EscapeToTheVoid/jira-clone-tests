@@ -198,6 +198,12 @@ public class JiraBoardTests {
     @DisplayName("TC-07: Only My Issues filter")
     @Description("Verify that 'Only My Issues' filter reduces the number of visible cards.")
     void testOnlyMyIssuesFilter() {
+        Allure.step("Wait for at least one card to appear", () -> {
+            Locator cards = page.locator("issue-card");
+            cards.first().waitFor(new Locator.WaitForOptions().setTimeout(5000));
+            int initialCount = cards.count();
+            assertTrue(initialCount > 0, "There should be at least one card before filtering.");
+        });
         int initialCount = Allure.step("Count total visible cards before applying filter", () -> {
             int count = page.locator("issue-card").count();
             assertTrue(count > 0, "There should be at least one card before filtering.");
