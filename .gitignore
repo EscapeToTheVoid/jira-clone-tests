@@ -13,6 +13,7 @@ target/
 !mvnw.cmd
 
 # === Allure Results & Reports ===
+.allure/
 allure-results/
 allure-report/
 *.html
