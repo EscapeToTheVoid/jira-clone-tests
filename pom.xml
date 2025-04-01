@@ -59,6 +59,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
                 <configuration>
+                    <argLine>-Dallure.results.directory=allure-results</argLine>
                     <useModulePath>false</useModulePath>
                 </configuration>
             </plugin>
