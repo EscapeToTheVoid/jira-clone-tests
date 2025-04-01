@@ -70,8 +70,10 @@ public class JiraBoardTests {
                 String label = entry.getKey();
                 String columnId = entry.getValue();
 
+
                 Locator header = page.locator(".status-list div:has-text(\"" + label + "\")").first();
                 Locator countSpan = header.locator("span");
+                page.waitForTimeout(500);
                 int numberInTitle = Integer.parseInt(countSpan.innerText().trim());
                 int actualCardCount = page.locator(columnId + " issue-card").count();
 
