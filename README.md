@@ -10,7 +10,6 @@ This repository contains an end-to-end automated UI test suite for the [Angular 
 - 🚀 **GitHub Actions** – CI/CD integration
 - 📄 **Well-documented test scenarios** – implemented & unimplemented test cases
 
-
 ---
 
 ## 📂 Project Structure
