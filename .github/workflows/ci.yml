@@ -37,9 +37,6 @@ jobs:
       - name: Run tests
         run: mvn clean test
 
-      - name: Ensure allure-results folder exists
-        run: mkdir -p target/allure-results
-
       - name: Generate Allure Report
         run: mvn allure:report
 
