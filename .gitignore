@@ -1,50 +1,39 @@
+# === Java & Maven ===
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-/target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
 
-# Allure reports
+# === Maven local repository cache (only ignore if accidentally copied) ===
+.mvn/
+!mvnw
+!mvnw.cmd
+
+# === Allure Results & Reports ===
 allure-results/
 allure-report/
+*.html
+*.json
+*.xml
 
-### IntelliJ IDEA ###
+# === IntelliJ IDEA ===
 .idea/
-*.iws
 *.iml
 *.ipr
+*.iws
+out/
 
-# Logs
-*.log
-
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
+# === OS-generated files ===
 .DS_Store
+Thumbs.db
 
-# Playwright
+# === Git ===
+*.orig
+
+# === Node (if any frontend tools used) ===
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+package-lock.json
+dist/
